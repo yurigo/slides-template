@@ -1,0 +1,112 @@
+---
+interface Props {
+	/**
+	 * Use the auto-animate feature for this slide or not
+	 *
+	 * default: true
+	 */
+	animate?: boolean;
+	"data-background-color"?: string;
+	/**
+	 * A single video source, or a comma separated list of video sources
+	 */
+	"data-background-video"?: string;
+	/**
+	 * Flags if the video should play repeatedly
+	 *
+	 * default: false
+	 */
+	"data-background-video-loop"?: boolean;
+	/**
+	 * Flags if the audio should be muted
+	 *
+	 * default: false
+	 */
+	"data-background-video-muted"?: boolean;
+	/**
+	 * Use cover for full screen and some cropping or contain for letterboxing.
+	 * Also supports other CSS background-size values for image backgrounds
+	 *
+	 * default: cover
+	 */
+	"data-background-size"?: "cover" | "contain" | string;
+	/**
+	 * Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque
+	 *
+	 * default: 1
+	 */
+	"data-background-opacity"?: number;
+	/**
+	 * CSS gradient background. Supports linear-gradient, radial-gradient and conic-gradient
+	 *
+	 * example: "linear-gradient(to bottom, #283b95, #17b2c3)"
+	 */
+	"data-background-gradient"?: string;
+	/**
+	 * URL of the image to show. GIFs restart when the slide opens
+	 */
+	"data-background-image"?: string;
+	/**
+	 * Background image position
+	 *
+	 * default: center
+	 */
+	"data-background-position"?: string;
+	/**
+	 * Background image repeat
+	 *
+	 * default: no-repeat
+	 */
+	"data-background-repeat"?:
+		| "repeat"
+		| "repeat-x"
+		| "repeat-y"
+		| "no-repeat"
+		| "space"
+		| "round";
+	/**
+	 * Override the presentation transition for this specific slide
+	 */
+	"data-transition"?: "none" | "fade" | "slide" | "convex" | "concave" | "zoom";
+	/**
+	 * Override the transition speed for this specific slide
+	 *
+	 * default: default
+	 */
+	"data-transition-speed"?: "default" | "fast" | "slow";
+}
+
+const {
+	animate = true,
+	"data-background-color": dataBackgroundColor,
+	"data-background-video": dataBackgroundVideo,
+	"data-background-video-loop": dataBackgroundVideoLoop,
+	"data-background-video-muted": dataBackgroundVideoMuted,
+	"data-background-size": dataBackgroundSize,
+	"data-background-opacity": dataBackgroundOpacity,
+	"data-background-gradient": dataBackgroundGradient,
+	"data-background-image": dataBackgroundImage,
+	"data-background-position": dataBackgroundPosition,
+	"data-background-repeat": dataBackgroundRepeat,
+	"data-transition": dataTransition,
+	"data-transition-speed": dataTransitionSpeed,
+} = Astro.props;
+---
+
+<section
+	data-auto-animate={animate}
+	data-background-color={dataBackgroundColor}
+	data-background-video={dataBackgroundVideo}
+	data-background-video-loop={dataBackgroundVideoLoop}
+	data-background-video-muted={dataBackgroundVideoMuted}
+	data-background-size={dataBackgroundSize}
+	data-background-opacity={dataBackgroundOpacity}
+	data-background-gradient={dataBackgroundGradient}
+	data-background-image={dataBackgroundImage}
+	data-background-position={dataBackgroundPosition}
+	data-background-repeat={dataBackgroundRepeat}
+	data-transition={dataTransition}
+	data-transition-speed={dataTransitionSpeed}
+>
+	<slot />
+</section>

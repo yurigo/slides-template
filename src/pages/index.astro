@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Title from "../slides/Title.astro";
+import WhyAstro from "../slides/WhyAstro.astro";
+import Test from "../slides/Test.astro";
+import TestCode from "../slides/TestCode.astro";
+import Fit from "../slides/Fit.astro";
+---
+
+<Layout title="My Awesome Talk Title">
+	<main class="reveal">
+		<div class="slides">
+			<!-- <section>
+				<section>1</section>
+				<section>2</section>
+			</section> -->
+			<Fit />
+			<Title />
+			<Test />
+			<TestCode />
+
+			<section data-transition="slide">The train goes on …</section>
+			<section data-transition="slide">and on …</section>
+			<section data-transition="slide-in fade-out">and stops.</section>
+			<section data-transition="fade-in slide-out">
+				(Passengers entering and leaving)
+			</section>
+			<section data-transition="slide">And it starts again.</section>
+
+			<WhyAstro />
+			<!-- Put your slides here -->
+		</div>
+	</main>
+</Layout>

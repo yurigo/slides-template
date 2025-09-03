@@ -1,0 +1,43 @@
+---
+import Slide from "../components/Slide.astro";
+---
+
+<Slide data-transition="zoom">
+	<Slide data-background-color="red">
+		<h1 class="r-fit-text">🦄</h1>
+	</Slide>
+	<Slide
+		data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+		data-background-video-loop
+		data-background-video-muted
+	>
+		The Internet is awesome!
+	</Slide>
+	<Slide
+		data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
+	>
+		<h2>🐟</h2>
+	</Slide>
+
+	<!-- Radial gradient -->
+	<Slide data-background-gradient="radial-gradient(#283b95, #17b2c3)">
+		<h2>🐳</h2>
+	</Slide>
+
+	<!-- Conic gradient -->
+	<Slide
+		data-background-gradient="conic-gradient(from 90deg, #ff6b6b, #4ecdc4, #45b7d1)"
+	>
+		<h2>🌈</h2>
+	</Slide>
+	<Slide data-background-image="./the-internet.png">
+		<h2>Image</h2>
+	</Slide>
+	<Slide
+		data-background-image="./the-internet.png"
+		data-background-size="100px"
+		data-background-repeat="repeat"
+	>
+		<h2>This background image will be sized to 100px and repeated</h2>
+	</Slide>
+</Slide>

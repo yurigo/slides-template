@@ -1,0 +1,21 @@
+---
+/**
+ * See the demo branch for example usage
+ */
+
+interface Props {
+	lang?: string;
+	lines?: string;
+}
+
+const { lang, lines } = Astro.props;
+---
+
+<pre
+	class={lang
+		? `language-${lang}`
+		: undefined}>
+		<code data-trim data-noescape data-line-numbers={lines}>
+			<slot />
+		</code>
+</pre>

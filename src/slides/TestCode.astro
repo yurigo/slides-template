@@ -1,0 +1,44 @@
+---
+import CodeBlock from "../components/CodeBlock.astro";
+import Slide from "../components/Slide.astro";
+---
+
+<Slide data-transition="zoom">
+	<Slide data-background-color="#282c34">
+		<h1>💻</h1>
+
+		<pre>
+			<code class="language-js" data-trim data-noescape data-line-numbers="1-3|3-4">
+				{`function greet() {
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+				}`}
+			</code>
+		</pre>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt esse
+			ipsum aliquid atque suscipit, officia recusandae autem necessitatibus ex
+			itaque voluptas labore, nihil assumenda. Fugit debitis animi neque aliquid
+			unde.
+		</p>
+	</Slide>
+	<Slide>
+		<CodeBlock lang="js" lines="1-3|3-4">
+			{
+				`
+				function greet() {
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+					console.log("Hello, World!");
+				}`
+			}
+		</CodeBlock>
+	</Slide>
+</Slide>
